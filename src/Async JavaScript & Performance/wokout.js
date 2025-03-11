@@ -1,31 +1,18 @@
-function orderProcess () {
-    return new Promise ((resolve) => {
-        setTimeout (() => {
-            console.log ("Order placed! 🍽")
-            resolve();
-        },3000)
-    })
-}
+// 1️⃣ "Start"
+// 2️⃣ "Inside setTimeout" (2-second delay)
+// 3️⃣ "Inside Promise"
+// 4️⃣ "End"
 
-function bPreparing() {
-    return new Promise ((resolve)=> {
-        setTimeout (() => {
-            console.log("Food is being prepared... 🍳")
-            resolve();
-        },5000)
-    } )
-}
+console.log("Start");
 
-function orderReady() {
-    return new Promise ((resolve)=> {
-        setTimeout (() => {
-            console.log("Pizza is ready for delivery 🚚")
-            resolve();
-        },1000)
-    } )
-}
+setTimeout(() => {
+    console.log("Inside setTimeout");
+}, 2000);
 
-orderProcess()
-    .then(bPreparing)
-    .then(orderReady)
-    .then(()=>(console.log("Order completed! 🎉")))
+Promise.resolve().then(() => {
+    console.log("Inside Promise");
+});
+
+console.log("End");
+
+

@@ -1,0 +1,38 @@
+//
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debounced Search</title>
+</head>
+<body>
+    <h2>Debounced Search Example</h2>
+    <input type="text" id="search" placeholder="Type to search..." />
+
+    <script>
+        // 1️⃣ Debounce Function
+        function debounce(fn, delay) {
+            let timer;
+            return function (...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => fn(...args), delay);
+            };
+        }
+
+        // 2️⃣ Simulate API Call
+        function fetchResults(query) {
+            console.log(`Fetching results for: ${query}`);
+        }
+
+        // 3️⃣ Create a Debounced Version of API Call
+        const optimizedSearch = debounce(fetchResults, 500);
+
+        // 4️⃣ Attach Debounced Function to Input Field
+        document.getElementById("search").addEventListener("input", (e) => {
+            optimizedSearch(e.target.value);
+        });
+    </script>
+</body>
+</html>

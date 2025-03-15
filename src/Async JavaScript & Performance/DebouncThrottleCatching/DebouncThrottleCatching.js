@@ -49,6 +49,7 @@ document.addEventListener("click", optimizedClick); // Click event optimized
 ////////////////////////////////// CATCHING ////////////////////////////////////////////////
 
 //Caching API Responses (Prevent Unnecessary API Calls) Caches API results to improve performance.
+//Caching means storing data so that we can reuse it instead of making a new request every time.
 
 
 const cache = new Map();

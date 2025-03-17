@@ -19,6 +19,31 @@ const optimizedSearch = debounce(fetchResults, 5000);
 optimizedSearch("Hello");
 optimizedSearch("Hello, World"); // Only this call runs after 500ms
 
+//--------------- eg --------------------------
+
+function sayHello() {
+    console.log("Hello, Arjun!");
+}
+
+
+function debounce(fn, delay) {
+    let timer;
+
+    return function(...args) {
+        clearTimeout(timer);
+        timer=setTimeout(() => {
+            fn.apply(this, args)
+        },delay)
+    }
+}
+
+
+const debouncedHello = debounce(sayHello, 2000);
+
+debouncedHello(); // call 1 go on and get stages for 2 sec
+debouncedHello(); //call 2 go on and clear call1 and stages for next 2 sec
+debouncedHello(); // clear call 2 Only this call should execute after 2 seconds.
+
 
 ///////////////////////////////////// THROTTLING /////////////////////////////////////////
 

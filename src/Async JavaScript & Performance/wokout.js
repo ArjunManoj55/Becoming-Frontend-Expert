@@ -1,18 +1,22 @@
-// 1️⃣ "Start"
-// 2️⃣ "Inside setTimeout" (2-second delay)
-// 3️⃣ "Inside Promise"
-// 4️⃣ "End"
-
-console.log("Start");
-
-setTimeout(() => {
-    console.log("Inside setTimeout");
-}, 2000);
-
-Promise.resolve().then(() => {
-    console.log("Inside Promise");
-});
-
-console.log("End");
+function sayHello() {
+    console.log("Hello, Arjun!");
+}
 
 
+function debounce(fn, delay) {
+    let timer;
+
+    return function(...args) {
+        clearTimeout(timer);
+        timer=setTimeout(() => {
+            fn.apply(this, args)
+        },delay)
+    }
+}
+
+
+const debouncedHello = debounce(sayHello, 2000);
+
+debouncedHello();
+debouncedHello();
+debouncedHello(); // Only this call should execute after 2 seconds.

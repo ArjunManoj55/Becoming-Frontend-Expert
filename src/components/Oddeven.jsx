@@ -30,31 +30,3 @@ export default function Oddeven() {
 };
 
 
-// import { useState } from "react";
-
-// export default function OddEven() {
-//   const [number, setNumber] = useState("");
-//   const [result, setResult] = useState("");
-
-//   const checkOddEven = () => {
-//     if (number === "") {
-//       setResult("Please enter a number");
-//       return;
-//     }
-//     setResult(number % 2 === 0 ? "Even" : "Odd");
-//   };
-
-//   return (
-//     <div>
-//       <input
-//         type="number"
-//         value={number}
-//         onChange={(e) => setNumber(e.target.value)}
-//         placeholder="Enter a number"
-//       />
-//       <button onClick={checkOddEven}>Check</button>
-//       <h3>{result}</h3>
-//     </div>
-//   );
-// }
-

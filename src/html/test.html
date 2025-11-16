@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS + JS Connection Example</title>
+
+  <!-- Link external CSS (place in <head>) -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1 id="title">Hello — CSS & JS connected!</h1>
+    <button id="changeBtn">Change Color</button>
+  </main>
+
+  <!-- Recommended: load JS before </body> with defer or just before closing body -->
+  <!-- Option A: use defer (executes after parsing) -->
+  <script src="script.js" defer></script>
+
+  <!-- Option B: without defer — place here so DOM is ready -->
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>

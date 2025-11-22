@@ -18,4 +18,4 @@ let a; // we can delare let a and use it anywhere in the program
 //but const shold be delared at first place
 
 //type error - assigning a value it allreday delcared const
-const b; //syntax error or re declare 
+const b; //syntax error or re declare //chnaging name

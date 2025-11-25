@@ -5,6 +5,7 @@
 // setTimeout() when timeout expires it needs to go to call stack
 // so it cant directley go to call stack so its put in to callback queue
 // event loop checks the callback queue and pushes it to call stack
+//if callstack dont become empty setTimeout needs to wait- event loop only works that way
 
 
 
@@ -28,3 +29,7 @@
 
 // local Storageconsole
 // location
+
+//JS ENGINE
+//PASSING -> COMPILATION -> EXE
+

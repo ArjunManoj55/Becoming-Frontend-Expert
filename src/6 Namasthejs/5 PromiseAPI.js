@@ -19,7 +19,7 @@ promise.all([p1, p2, p3]);
 [val1, err2, val3] //out in 3 sec
 
 
-//promise.race() - one who finish first will be the winner --------------------------------------------------------------------------------
+//promise.race() - one who finish first will be the winner/ first settled promise -------------------------- 
 
 promise.race([p1, p2, p3]); //p1 3sec, p2 1 sec, p3 2sec
 
@@ -27,7 +27,7 @@ promise.race([p1, p2, p3]); //p1 3sec, p2 1 sec, p3 2sec
 
 //what if the first one is an error???????????????? p3 fails -  eror after 2 sec - not wait for others to settle just out if fails
 
-//promise.any() - similar to race but it will wait -------------------------------------------------------------------------------------
+//promise.any() - similar to race but it will wait/ first setteled success/seeking for first success   ------------------ 
 
 promise.any([p1, p2, p3]); //p1 3sec, p2 1 sec -fail, p3 2sec -fail
 

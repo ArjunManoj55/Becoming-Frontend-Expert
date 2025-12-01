@@ -1,10 +1,8 @@
-const p = new Promise((resolve, reject) => {
-    resolve("resolved")
-});
-
-async function handlePromise() {
-    const val = await p;
-    console.log(val);
+let multiplyClosure = function (x) {
+    return function (y) {
+        console.log(x * y);
+    }
 }
 
-handlePromise();
+let multiplyByTwo2 = multiplyClosure(2);  
+multiplyByTwo2(3);

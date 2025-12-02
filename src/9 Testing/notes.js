@@ -15,3 +15,31 @@ test("it should calculate sum of two functions", () => { // description
     expect(result).toBe(7); 
 
 })
+
+// unit testing for react component (one component -isolated)
+//compoennt
+export default Contact =() => {
+    return(
+        <div>
+            <h1 className="font-bold"></h1>
+        </div>
+    )
+}
+
+//test code
+
+import { render, screen } from "@testing-library/react";
+import { expect, it } from "vitest";
+//import component from path
+
+test("shold load the contact component"), () => {
+    render(<Contact /> );
+
+    const heading = screen.getByRole("heading");
+
+    expect (heading).toBeInTheDocument(); 
+}
+
+it("shold load button inside the contact component"), () => {
+    //test cases
+}

@@ -1,3 +1,4 @@
+import Tab from './10-tab-myntra-zepto/Tab'
 import './App.css'
 import Counter from './components/Counter' 
 import Oddeven from './components/Oddeven'
@@ -15,7 +16,9 @@ function App() {
       {/* <CheckNo /> */}
       {/* <TrackNumber /> */}
       {/* <ToDoComp /> */}
-      <TrackNumber />
+      {/* <TrackNumber /> */}
+
+      <Tab />
     </>
   )
 }

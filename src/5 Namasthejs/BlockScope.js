@@ -12,9 +12,9 @@ const c = 300;
   var a = 10; // NOT shadowing → replacing the same variable
   let b = 20; // NEW block-scoped variable
   const c = 30;
-  console.log(a); // 10
-  console.log(b); // 20
-  console.log(c); // 30
+  // console.log(a); // 10
+  // console.log(b); // 20
+  // console.log(c); // 30
 }
 
 console.log(a); // 10 → because var overwrote the outer variable
@@ -26,3 +26,4 @@ console.log(c); // ERROR → block scoped
 // 300
 
 // we can shadow let using let inside a block
+

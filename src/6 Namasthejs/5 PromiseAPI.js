@@ -13,7 +13,7 @@ promise.all([p1, p2, p3]);
 //in case p2 rejected 
 // out will be error AFTER 1 SEC(it wont wait if error comes it just dont wait for others)
 
-//promise.allSetteled()-wait for all results---------------------------------------------------------------------------
+//promise.allSetteled()-wait for all results ---------------------------------------------------------------------------
 
 //when u dont care which fails and want like all others to fullfill and promise to complete irrespective of failures
 [val1, err2, val3] //out in 3 sec
@@ -24,6 +24,7 @@ promise.all([p1, p2, p3]);
 promise.race([p1, p2, p3]); //p1 3sec, p2 1 sec, p3 2sec
 
 //after 1 sec it will give u the value of first settled promise
+//p1 and p3 keep running, but their results are ignored
 
 //what if the first one is an error???????????????? p3 fails -  eror after 2 sec - not wait for others to settle just out if fails
 
@@ -33,4 +34,5 @@ promise.any([p1, p2, p3]); //p1 3sec, p2 1 sec -fail, p3 2sec -fail
 
 [val1 ] //ignore rejected and out first sucess
 
-//if all fails out will be an array/list of errors - aggregate error
+//if all fails out will be an array/list of errors - aggregate error 
+//outputs the first resolve and reject if all fails

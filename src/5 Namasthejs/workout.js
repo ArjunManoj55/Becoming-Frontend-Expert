@@ -1,38 +1,25 @@
-const cart = ["shirt", "pants", "shoes"];
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("resolved1")
+    }, 10000);
+});
 
-//create order promise
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("resolved2")
+    }, 5000);
+});
 
-const orderPromise = createOrder(cart);
+async function handlePromise( ) {
+    console.log("hello1");
 
-//consume promise
-orderPromise
-    .then(function(orderId) {
-        console.log("orderid", orderId )
-        proceedToPayment(orderId);
-    })
-    .catch(function(error) {
-        console.log("err" , error.message);
-    })
+    const val1 = await p1;
+    console.log("hi1");
+    console.log(val1);
 
-
-function createOrder(cart) {
-    return new Promise(function(resolve, reject) {
-        //reject
-        if(!validateCart(cart)) {
-            reject(new Error("rejected"))
-            return;
-        }
-        //validate
-        const orderId = 1234;
-        //resolve
-        resolve(orderId);
-    })
+    const val2 = await p2;
+    console.log("hi2");
+    console.log(val2);
 }
 
-function validateCart(cart) {
-    return true;
-}
-
-function proceedToPayment(orderId) {
-    console.log("Proceeding to payment for order:", orderId);
-}
+handlePromise();

@@ -21,10 +21,10 @@ function App() {
       {/* <ToDoComp /> */}
       {/* <TrackNumber /> */}
 
-      {/* <Tab /> */}
+      <Tab />
       {/* <Page /> pagination */}
       {/* <Todo /> */}
-      <Accordian />
+      {/* <Accordian /> */}
     </>
   )
 }

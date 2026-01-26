@@ -37,6 +37,7 @@
 //binary search -  O(log n)
 
 // in nested loops - O(n^2) - 2 loops / O(n^3) if 3 loops
+//if 2 independed loops are running - -> O(2n) -> O(n) (ignore the no because it small diff)
 
 // if 1 loop and inside a binary search - O(n * log n) eg:merge sort
 
@@ -48,4 +49,14 @@
 // constant time complexity -> O(1)
 // n=1/n=1000 -> x = 1; it dosent vary according to input
 
-//min 58
+//SPACE COMPLEXITY ( HOW MUCH SPACE USING )---------------------------
+
+// like using a variable
+
+//using an array of size n ->  O(n)
+
+// for declaed array ( countable ) its constant -> O(1)
+
+// if its a 2D matrix - O(n^2)
+
+//so if its O(n^2 + n) it becomes O(n^2) - > +n is a small value

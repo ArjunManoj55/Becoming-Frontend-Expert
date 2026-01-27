@@ -9,5 +9,5 @@ function searchElement(arr, x) {
     return -1; 
 }
 
-const index = searchElement(arr, 1);
-console.log(index); // 1
+const index = searchElement(arr, 2);
+console.log(index); 

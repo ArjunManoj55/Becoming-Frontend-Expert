@@ -11,4 +11,4 @@ function findLargest() {
 
 let result = findLargest(arr);
 console.log(result);
--Infinity
+//-Infinity

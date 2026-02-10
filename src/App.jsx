@@ -2,6 +2,7 @@ import Tab from './10-tab-myntra-zepto/Tab'
 import Page from './11-Pagination-flipkart/Page'
 import Todo from './12-Todo-microsoft-ola-swiggy/Todo'
 import Accordian from './13-Accordian-meta-ola-zomato/Accordian'
+import AutoComplete from './14-AutoCompleteSearchBar/AutoComplete'
 import FormPage from './15-formValidation/FormPage'
 import './App.css'
 import Counter from './components/Counter' 
@@ -27,7 +28,8 @@ function App() {
       {/* <Todo /> */}
       {/* <Accordian /> */}
 
-      <FormPage />
+      {/* <FormPage /> */}
+      <AutoComplete />
     </>
   )
 }

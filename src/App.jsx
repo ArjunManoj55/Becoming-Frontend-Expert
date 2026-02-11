@@ -4,6 +4,7 @@ import Todo from './12-Todo-microsoft-ola-swiggy/Todo'
 import Accordian from './13-Accordian-meta-ola-zomato/Accordian'
 import AutoComplete from './14-AutoCompleteSearchBar/AutoComplete'
 import FormPage from './15-formValidation/FormPage'
+import ProgressBar from './16-Progressbar-google-meta/ProgressBar'
 import './App.css'
 import Counter from './components/Counter' 
 import Oddeven from './components/Oddeven'
@@ -14,6 +15,7 @@ import TrackNumber from './components/TrackNumber'
 
 
 function App() {
+  const bars = [1,5,10,60,85,100]
   return (
     <>
       {/* <Counter />  */}
@@ -29,7 +31,8 @@ function App() {
       {/* <Accordian /> */}
 
       {/* <FormPage /> */}
-      <AutoComplete />
+      {/* <AutoComplete /> */}
+      {bars.map(value=><ProgressBar key={value} progress={value}/>)}
     </>
   )
 }

@@ -1,0 +1,13 @@
+  .outer-progress-container {
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .inner {
+    background-color: green;
+    /* width:50% */
+    color: white;
+    text-align: right;
+    transition: 0.5s ease-in;
+  }

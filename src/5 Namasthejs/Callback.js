@@ -1,6 +1,6 @@
 // callback function------------------------------------------------------------
 
-// a function which we pass into other function is cal;led call back function
+// a function which we pass into other function is called call back function
 function x () {
 
 }
@@ -27,3 +27,4 @@ x(function y () {
 //y
 //timeout
 
+// function calls iself -> recusive function

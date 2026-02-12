@@ -1,63 +1,36 @@
 import React, { useState } from "react";
-import "../12-Todo-microsoft-ola-swiggy/page.css";
 
-function Todo() {
-  const [tasks, setTasks] = useState("");
-  const [list, setList] = useState([]);
+function App() {
+  const [inputValue, setInputValue] = useState("");
+  const [lists, setLists] = useState([]);
 
-  const addToList = () => {
-    const item = {
-      id: list.length + 1,
-      text: tasks,
-      completed: false,
-    };
-    setList((prev) => [...prev, item]);
-    //empty after adding
-    setTasks("");
+  const handleClick = () => {
+    setLists([...lists, inputValue]);
+    setInputValue("");
   };
 
-  //toggle strike
-  const toggleCompleted = (id) => {
-    setList(
-      list.map((t) => {
-        if (t.id === id) {
-          return {
-            ...t,
-            completed: !t.completed,
-          };
-        } else {
-          return t;
-        }
-      })
-    );
-  };
-
-  //delete
-  const handleDelete = (id) => {
-    setList(list.filter((t) => t.id !== id));
+  const handleDelete = (indextoDelete) => {
+    setLists(lists.filter((_, index) => index !== indextoDelete));
   };
 
   return (
     <div>
-      <h1>TODO LIST</h1>
+      <h1>todo</h1>
       <input
         type="text"
-        placeholder="enter todo"
-        value={tasks}
-        onChange={(e) => setTasks(e.target.value)}
+        placeholder="todos"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
       />
-      <button onClick={() => addToList()}>add</button>
+
+      <button onClick={handleClick}>update todo</button>
 
       <ul>
-        {list.map((t) => (
-          <li key={t.id}>
-            <input
-              type="checkbox"
-              checked={t.completed}
-              onChange={() => toggleCompleted(t.id)}
-            />
-            <span className={t.completed ? "strike" : ""}>{t.text}</span>
-            <button onClick={() => handleDelete(t.id)}>delete</button>
+        {lists.map((item, index) => (
+          <li key={index}>
+            {" "}
+            {item}
+            <button onClick={() => handleDelete(index)}>delete</button>
           </li>
         ))}
       </ul>
@@ -65,4 +38,4 @@ function Todo() {
   );
 }
 
-export default Todo;
+export default App;

@@ -8,4 +8,5 @@ const fibonacciSeries = (n) => {
   return series;
 };
 
-console.log(fibonacciSeries(6));
+console.log(fibonacciSeries(5)); 
+// [0, 1, 1, 2, 3]

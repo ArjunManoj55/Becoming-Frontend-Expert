@@ -1,11 +1,13 @@
-const fibonacciSeries = (n) => {
-  let series = [0, 1];
+function singleNumber(arr) {
 
-  for (let i = 2; i < n; i++) {
-    series.push(series[i - 1] + series[i - 2]);
-  }
+    let xor = 0; 
 
-  return series;
-};
+     for (let i = 0; i < arr.length; i++) {
+        xor = xor ^ arr[i];
+    }
+    return xor;
+}
 
-console.log(fibonacciSeries(6));
+let result = singleNumber([1,1,2,3,3,6,6]);
+console.log(result); //2
+

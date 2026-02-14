@@ -12,3 +12,11 @@ function removeElement(arr, val) {
 
 let result = removeElement([1,2,3,3,5,6,7,3], 3);
 console.log(result);
+
+// fast way
+
+function removeElement(arr, n) {
+  return arr.filter((x) => ( x !== n));
+}
+
+console.log(removeElement([1, 2, 3, 3, 5, 6, 7, 3], 3));

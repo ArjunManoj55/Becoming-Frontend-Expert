@@ -12,7 +12,7 @@ function maxConsicutiveOnes(arr) {
         }
     }
 
-    return  Math.max(maxCount, currentCount);
+    return maxCount;
 
 }
 

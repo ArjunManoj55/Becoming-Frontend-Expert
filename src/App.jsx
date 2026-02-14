@@ -13,6 +13,7 @@ import CheckNo from './components/Positive'
 import useeffect from './components/Positive'
 import ToDoComp from './components/ToDoComp'
 import TrackNumber from './components/TrackNumber'
+import FindSum from './pages/FindSum'
 
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
       {/* {bars.map(value=><ProgressBar key={value} progress={value}/>)} */}
 
       {/* <ContextHome /> */}
+
+      <FindSum />
       
     </>
   )

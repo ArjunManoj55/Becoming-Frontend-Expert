@@ -38,4 +38,4 @@ let arr2 = [2, 2, 4, 6, 8];
 
 mergeArray(arr1, 6, arr2, 5);
 console.log(arr1);
- Assignment-Realtime-Ai-Chatbot
+//  Assignment-Realtime-Ai-Chatbot

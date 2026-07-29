@@ -3,7 +3,7 @@
 //this will make 3 parallel api calls
 
 promise.all([p1, p2, p3]);
-//p1 takes 3sec ,p2 takes 1 sec, p3 takes 2sec
+//p1 takes 3sec ,p2 takes 1 sec, p3 takes 2sec+
 // out will be an array of result with values of results
 
 [val1, val2, val3] //out in 3sec because its parallel but it will wait for all of them to finish
@@ -13,11 +13,10 @@ promise.all([p1, p2, p3]);
 //in case p2 rejected 
 // out will be error AFTER 1 SEC(it wont wait if error comes it just dont wait for others)
 
-//promise.allSetteled()-wait for all results ---------------------------------------------------------------------------
+//promise.allSetteled()-wait for all results ----------------------------------------------------------------------
 
 //when u dont care which fails and want like all others to fullfill and promise to complete irrespective of failures
 [val1, err2, val3] //out in 3 sec
-
 
 //promise.race() - one who finish first will be the winner/ first settled promise -------------------------- 
 

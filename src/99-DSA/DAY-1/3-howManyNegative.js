@@ -11,5 +11,4 @@ function countNegative(arr) {
 }
 
 let result = countNegative(arr);
-
 console.log(result);

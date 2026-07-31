@@ -15,7 +15,7 @@ function Profile({ formData, handleSubmit, handleChange }) {
         <input value={formData.sex} placeholder="sex" onChange={(e) => handleChange(e, 'sex')}></input>
       </div>
 
-      <button onClick={handleSubmit}>submit</button>
+      {/* <button onClick={handleSubmit}>submit</button> */}
     </div>
   );
 }

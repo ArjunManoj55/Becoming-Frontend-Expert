@@ -70,7 +70,7 @@ const Tab = () => {
             className="heading"
             onClick={() => setActiveTab(index)}
           >
-            {t.name}
+            {t.name} 
           </div>
         ))}
       </div>

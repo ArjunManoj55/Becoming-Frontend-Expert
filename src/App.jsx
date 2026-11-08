@@ -1,4 +1,4 @@
-import Tab from './10-tab-myntra-zepto copy/Tab'
+// import Tab from './10-tab-myntra-zepto copy/Tab'
 import Page from './11-Pagination-flipkart/Page'
 import Todo from './12-Todo-microsoft-ola-swiggy/Todo'
 import Accordian from './13-Accordian-meta-ola-zomato/Accordian'
@@ -28,7 +28,7 @@ function App() {
       {/* <TrackNumber /> */}
 
       {/* <Tab /> */}
-      {/* <Page /> pagination */}
+      <Page /> 
       {/* <Todo /> */}
       {/* <Accordian /> */}
 
@@ -40,7 +40,7 @@ function App() {
 
       {/* <FindSum /> */}
 
-      <Tab />
+      {/* <Tab /> */}
       
     </>
   )

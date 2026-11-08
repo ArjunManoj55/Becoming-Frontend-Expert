@@ -7,7 +7,7 @@ function reverseInteger(n) {
 
     while( n > 0) {
         let rem = n % 10 ;
-        rev = 10*rev + rem;
+        rev = rev * 10 + rem;
         n = Math.floor(n / 10);
     }
 

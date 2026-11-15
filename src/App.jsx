@@ -5,7 +5,9 @@ import Accordian from './13-Accordian-meta-ola-zomato/Accordian'
 import AutoComplete from './14-AutoCompleteSearchBar/AutoComplete'
 import FormPage from './15-formValidation/FormPage'
 import ProgressBar from './16-Progressbar-google-meta/ProgressBar'
-import ContextHome from './6.0-ContextAPI/ContextHome'
+// import ContextHome from './6.0-ContextAPI/ContextHome'
+// import ContextHome from './6.0-ContextAPIcopy/ContextHome'
+import Home from './6.0-ContextAPIcopy/Home.jsx'
 import './App.css'
 import Counter from './components/Counter' 
 import Oddeven from './components/Oddeven'
@@ -28,7 +30,7 @@ function App() {
       {/* <TrackNumber /> */}
 
       {/* <Tab /> */}
-      <Page /> 
+      {/* <Page />  */}
       {/* <Todo /> */}
       {/* <Accordian /> */}
 
@@ -41,6 +43,10 @@ function App() {
       {/* <FindSum /> */}
 
       {/* <Tab /> */}
+
+      {/* <ContextHome /> */}
+
+      <Home />
       
     </>
   )

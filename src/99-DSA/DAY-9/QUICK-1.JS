@@ -94,3 +94,15 @@ const twoSum = (arr, target) => {
 
 console.log(twoSum([2, 7, 11, 15], 9));
 // [0, 1]
+
+--------------rev str using loop
+
+const revStr = (str) => {
+    let result = ""
+    for(let i = str.length -1 ; i >= 0; i--) {
+         result = result + str[i]
+    }
+    return result
+}
+
+console.log(revStr("hello"));
